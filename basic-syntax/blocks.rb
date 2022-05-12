@@ -15,16 +15,25 @@
 # end
 
 
-musicians = ['David Gilmour', 'Roger Waters', 'Richard Wright', 'Nick Mason']
+# musicians = ['David Gilmour', 'Roger Waters', 'Richard Wright', 'Nick Mason']
 
-upcased_first_names = musicians.map do |musician|
-  first_name = musician.split.first
-  upcased_first_name = first_name.upcase
-  puts "[DEBUG] #{musician}'s first name is #{upcased_first_name}"
+# upcased_first_names = musicians.map do |musician|
+#   first_name = musician.split.first
+#   upcased_first_name = first_name.upcase
+#   puts "[DEBUG] #{musician}'s first name is #{upcased_first_name}"
 
-  upcased_first_name
-end
-
+#   upcased_first_name
+# end
 
 # method can have multiple arguments in the block
 # method(arg_1,...) do { some code }
+
+def fun
+  puts 'This is the first line'
+  yield
+  puts 'This is the third line'
+end
+
+fun do
+  puts 'This is the second line'
+end
